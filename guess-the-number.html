@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        // let num = 1;
+        let num = Math.floor(Math.random() * 11);
+        let attempts = 0;
+        let correct = false;
+        let guess = prompt("Guess a number between 1 and 10");
+
+        while (correct == false) {
+            attempts++;
+
+            if (num == guess) {
+                alert(`Got it! You only took ${attempts} tr${attempts == 1 ? "y" : "ies"}!`);
+                correct = true;
+            } else {
+
+                if (num < guess) {
+                    guess = prompt("Sorry!  The number is less than " + guess + ", try again!");
+                } else {
+                    guess = prompt("Sorry! The number is greater than " + guess + ", try again!");
+                }
+
+                
+            }
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
